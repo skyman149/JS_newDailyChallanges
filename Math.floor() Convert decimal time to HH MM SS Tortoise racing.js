@@ -31,4 +31,4 @@ function race(v1, v2, g) {
     return [h, m, s];
 }
 //console.log(race(720, 850, 70)); //[0, 32, 18]
-//console.log(race(80, 91, 37)); //[3, 21, 49]
+//console.log(race(80, 91, 37)); //[3, 21, 49] 
