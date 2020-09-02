@@ -18,5 +18,5 @@ Examples:
 */
 
 function solve(arr){
-    return arr.find(el => !arr.includes(-el))
+    return arr.find(el => !arr.includes(-el)) // ! - means "no"
 }
