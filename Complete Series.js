@@ -29,3 +29,14 @@ function completeSeries(arr) {
     let dup = nArr.filter(el => nArr.indexOf(el) !== nArr.lastIndexOf(el))
     return dup.length > 0? [0]:full;
   }
+
+  //OR
+
+  function completeSeries(arr) {
+    let newArr =[0]
+    let x = arr.filter(el => arr.lastIndexOf(el) !== arr.indexOf(el))
+      if (x.length > 0) return [0]
+    else for (let i = 1; i <= Math.max(...arr); i++) {
+      newArr.push(i)
+    } return newArr;
+    }
