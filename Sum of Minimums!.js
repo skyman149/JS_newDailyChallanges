@@ -24,3 +24,13 @@ function sumOfMinimums(arr) {
     return sum;
   }
   console.log(ss([[3,5,2],[7,8,1,12],[1],[12,3,10]])); //7
+
+  //OR even better my code
+
+  function ss(arr){
+    let sum = 0;
+      for (let i = 0; i<arr.length; i++){
+        sum +=Math.min(...arr[i])
+      }
+    return sum;
+  }
