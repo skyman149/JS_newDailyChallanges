@@ -15,3 +15,11 @@ function isPalindrome(x) {
     }
     return str.toUpperCase() === x.toUpperCase();
   }
+
+// NOTE: IF YOU NEED TO CHECK 'if palindrome is more then one word' USE THIS CODE:
+
+function isPalindrome(str){
+  let abc = str.toLowerCase().split(' ').join('')
+  let abcReverse = abc.split('').reverse().join('')
+  return abc === abcReverse; 
+}
