@@ -16,6 +16,17 @@ keys = ['a', 'b', 'c']
 values = [1, 2, 3, 4]
 createDict(keys, values) // returns {'a': 1, 'b': 2, 'c': 3}
 */
+function createDict(keys, values){
+    var result = {};
+    for(var i = 0; i < keys.length; i++) {
+      if(values[i]==undefined)
+        result[keys[i]] = null;
+      else
+        result[keys[i]] = values[i];
+    }
+    return result;
+  }
+//OR
 
 function createDict(keys, values){
     let obj = {};
@@ -24,6 +35,4 @@ function createDict(keys, values){
     }
     return obj;
   }
-
-  //OR
 
