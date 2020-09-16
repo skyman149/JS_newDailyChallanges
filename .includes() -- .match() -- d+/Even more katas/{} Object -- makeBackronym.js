@@ -50,3 +50,12 @@ var dict = {
       }
       return str.slice(0, -1);
     };
+
+    //OR
+
+    var makeBackronym = function(string){
+        return string.toUpperCase()
+              .split('')
+              .map(el => dict[el])
+              .join(' ');
+      };
