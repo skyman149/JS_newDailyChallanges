@@ -24,3 +24,18 @@ function squares(x, n) {
     }
     return arr;
   }
+
+  //OR
+
+  function squares(x, n) {
+    let arr = [];
+    for (let i = 0; i < n; i++){ // runs "n" times
+      arr.push(x);
+      x *= x;
+    }
+    return arr;
+  }
+
+  //OR
+
+  
