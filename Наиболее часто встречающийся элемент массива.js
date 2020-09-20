@@ -47,7 +47,7 @@ function mostFrequentElement(arr){
         maxNum = arr.lastIndexOf(arr[i]) - arr.indexOf(arr[i]);
       }
     }
-    return newArr//.filter((el, i) => i === newArr.indexOf(el));
+    return newArr.filter((el, i) => i === newArr.indexOf(el));
   }
   console.log(mostFrequentElement([5, 2, 1, 5])); //[5]
   console.log(mostFrequentElement([5, 7, 7, 1, 1, 1, 8, 7, 3, 6, 7, 1])); //[1, 7]
