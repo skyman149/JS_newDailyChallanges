@@ -33,4 +33,23 @@ function mostFrequentElement(arr){
 
   //OR
 
+  function mostFrequentElement(arr){
+    arr.sort((a,b) => a-b);
+    let newArr = [];
+    let maxNum = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr.lastIndexOf(arr[i]) - arr.indexOf(arr[i]) === maxNum) {
+        newArr.push(arr[i]);
+      }
+      if (arr.lastIndexOf(arr[i]) - arr.indexOf(arr[i]) > maxNum) {
+        newArr = []
+        newArr.push(arr[i]);
+        maxNum = arr.lastIndexOf(arr[i]) - arr.indexOf(arr[i]);
+      }
+    }
+    return newArr//.filter((el, i) => i === newArr.indexOf(el));
+  }
+  console.log(mostFrequentElement([5, 2, 1, 5])); //[5]
+  console.log(mostFrequentElement([5, 7, 7, 1, 1, 1, 8, 7, 3, 6, 7, 1])); //[1, 7]
+  console.log(mostFrequentElement([])); //[]
   
