@@ -24,5 +24,6 @@ function myLanguages(results) {
   //OR
 
   function myLanguages(results) {
-    return Object.keys(results).sort((a,b) => results[b]-results[a]).filter(k => results[k] >= 60)
+    return Object.keys(results).sort((a,b) => results[b]-results[a]).filter(value => results[value] >= 60)
    }
+   console.log( myLanguages({"Java" : 10, "Ruby" : 80, "Python" : 65}));//["Ruby", "Python"])
