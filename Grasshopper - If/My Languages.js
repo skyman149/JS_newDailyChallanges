@@ -23,4 +23,6 @@ function myLanguages(results) {
 
   //OR
 
-  
+  function myLanguages(results) {
+    return Object.keys(results).sort((a,b) => results[b]-results[a]).filter(k => results[k] >= 60)
+   }
