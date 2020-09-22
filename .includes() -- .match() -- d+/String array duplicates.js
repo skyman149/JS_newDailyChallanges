@@ -27,4 +27,6 @@ function dup(s) {
 
    //OR
 
-   
+   function dup(arr) {
+    return arr.map(s => s.split('').map((t,i) => s[i+1] !== t ? t : '' ).join(''));
+  };
