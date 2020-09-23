@@ -22,3 +22,34 @@ primes(6) // [2, 3, 5, 7, 11, 13]
 HOTE: All the above functions should take as their first parameter a number that determines the length of the returned array.
 */
 
+//My code:
+const squares = n => {
+    let arr = [];
+    while(n>0){
+      arr.unshift(n**2);
+      n--;
+    }
+    return arr;
+  }
+  
+  const range = (n, start, step) => {
+    let arr = [];
+    while(arr.length < n){
+      arr.push(start)
+      start += step;
+    }
+    return arr;
+  }
+  
+  const random = (n, min, max) => {
+    let arr = [];
+    while(arr.length < n){
+      let test = Math.floor(Math.random() * (max - min+1) + min)
+      arr.push(test)
+    }
+    return arr;
+  }
+  //not my code:
+  const primes   = (n,p=1)  => Array.from({length:n}, _=> p = getPrime(p+1));
+  
+  const getPrime = (n,i=2)  => i*i <= n ? n%i ? getPrime(n,i+1) : getPrime(n+1) : n;
