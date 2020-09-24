@@ -18,12 +18,12 @@ Example
 
 function duplicateCount(text){
     let up = text.toUpperCase(); // to make sure all chars are caps(no lowercase)
-    let arr = up.split("").sort(); // creating array and sorting in 1-a-z order
-    let uniq = arr.filter((el, i) => arr.indexOf(el) !== i);
+    let arr = up.split("").sort(); // creating array and sorting each el in 1-a-z order
+    let uniq = arr.filter((el, i) => arr.indexOf(el) !== i); // removing duplicates
     
     let count = 0;
     
-    for (let i = 0; i<uniq.length; i++){
+    for (let i = 0; i<uniq.length; i++){ //if el not equal next el count +1
       if(uniq[i] !== uniq[i+1]){
         count++;
       }
