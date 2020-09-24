@@ -16,3 +16,8 @@ var moveZeros = function (arr) {
     return noZeroArr.concat(zeroArr);
   }
 
+// or even better:
+
+var moveZeros = function (arr) {
+    return arr.filter(i => i !== 0).concat(arr.filter(i => i === 0));
+  }
