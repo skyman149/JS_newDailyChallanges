@@ -21,3 +21,7 @@ var moveZeros = function (arr) {
 var moveZeros = function (arr) {
     return arr.filter(i => i !== 0).concat(arr.filter(i => i === 0));
   }
+
+// OR MEGA BETTER
+
+let moveZeros = arr => arr.filter(i => i !== 0).concat(arr.filter(i => i === 0));
