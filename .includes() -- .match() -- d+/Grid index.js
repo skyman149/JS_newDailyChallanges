@@ -29,4 +29,19 @@ function gridIndex(grid, indices) {
     }
     return str;
   }
-  
+
+  //OR
+
+  function gridIndex(grid, indices) {
+    let arr = [0];
+    let str = '';
+    for (el of grid){
+      for (let i = 0; i < el.length; i++) {
+        arr.push(el[i])
+      }
+    }
+    for (i = 0; i < indices.length; i++) {
+      str += arr[indices [i]]
+    }
+    return str;
+  }
