@@ -27,3 +27,17 @@ function solve(arr){
     if(check <= sorted[2]){return check;}
     else {return Math.floor(sum / 2);}
   }
+
+  // LOOP APPROACH:
+
+  function solve(arr){
+    let count = 0;
+    arr.sort((a,b) => a-b); // sorts from min to max
+    while(arr[0]!=0){
+      count++;
+      arr[0]--;
+      arr[2]--;
+      arr.sort((a,b)=>a-b);
+     }
+    return count + arr[1];
+  }
