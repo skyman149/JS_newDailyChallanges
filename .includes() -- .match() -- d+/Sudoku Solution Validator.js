@@ -139,3 +139,27 @@ function validSolution(board){
     }
     return result;
   }
+
+
+  // shoprter solution
+
+  function validSolution(board){
+    let resultArr = [];
+   let verticalArr = [[], [], [], [], [], [], [], [], []];
+     let checkArr = [];
+   for (let i = 0; i < 9; i++) {
+     board.map(el => verticalArr[i].push(el[i]));
+   }
+    for (let i = 0; i < 9; i++) { 
+      if (board[i].reduce((acc, cur) => acc + cur) === 45 && verticalArr[i].reduce((x, b) => x + b) === 45) {resultArr.push(1);
+      } else {resultArr.push(0);}
+      for (let c = 0; c < 9; c = c + 3) {checkArr = []
+     checkArr = checkArr.concat(board[c].slice(c, c + 3))
+     checkArr = checkArr.concat(board[c + 1].slice(c, c + 3))
+     checkArr = checkArr.concat(board[c + 2].slice(c, c + 3))
+      if (checkArr.reduce((acc, cur) => acc + cur) === 45) {resultArr.push(1);
+      } else {resultArr.push(0)}
+   }
+   
+    } return !resultArr.includes(0);
+   }
