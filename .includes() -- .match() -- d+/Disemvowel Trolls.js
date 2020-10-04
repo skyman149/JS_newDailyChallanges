@@ -12,7 +12,6 @@ Note: for this kata y isn't considered a vowel.
 
 function disemvowel(str) {
     let newStr = '';
-    let trash = '';
     [...str].forEach(el => el === "a" || 
                            el === "e" || 
                            el === "i" || 
@@ -22,7 +21,7 @@ function disemvowel(str) {
                            el === "E" || 
                            el === "I" || 
                            el === "O" || 
-                           el === "U"? trash += el : newStr += el)
+                           el === "U"? newStr += '' : newStr += el)
     return newStr;
   }
 
