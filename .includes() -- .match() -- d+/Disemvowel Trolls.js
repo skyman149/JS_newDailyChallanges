@@ -25,3 +25,9 @@ function disemvowel(str) {
                            el === "U"? trash += el : newStr += el)
     return newStr;
   }
+
+  // OR
+
+  function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, '');
+  }
