@@ -32,6 +32,12 @@ function mirror(data) {
   console.log(mirror([2])); //[2]
   console.log(mirror([])); //[]
 
+//my second code (same issue :/)
+
+function mirror(data) {
+    let part1 = data.sort((a,b)=>a-b)
+    let part2 = part1.slice(0,-1).reverse().sort((a,b) => b-a);
+    return part1.concat(part2)
+  }
   // "proper" code
 
-  
