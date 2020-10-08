@@ -39,5 +39,15 @@ function mirror(data) {
     let part2 = part1.slice(0,-1).reverse().sort((a,b) => b-a);
     return part1.concat(part2)
   }
-  // "proper" code
+  // my "proper" code (finaly)
+
+  function mirror(data) {
+    let arr = [];
+    for (let i = 0; i < data.length; i++){
+      arr.push(data[i])
+    }
+    let part1 = arr.sort((a,b)=>a-b)
+    let part2 = part1.slice(0,-1).reverse().sort((a,b) => b-a);
+    return part1.concat(part2)
+  }
 
