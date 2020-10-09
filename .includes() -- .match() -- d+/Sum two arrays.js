@@ -33,3 +33,23 @@ function addArrays(array1, array2) {
   }
 
   // my first code
+
+  function addArrays(array1, array2) {
+    if(array1.length === 0 && array2.length === 0) return [];
+    if(array1.length !== 0 && array2.length === 0) return array1;
+    if(array1.length === 0 && array2.length !== 0) return array2;
+    
+    let arrayToNumber1 = parseInt(array1.join(''));
+    let arrayToNumber2 = parseInt(array2.join(''));
+    let res = (arrayToNumber1 + arrayToNumber2).toString().split("");
+    let toNum = [];
+    if(res[0]==="-"){
+      toNum.push(Number.parseInt(-res[1]));
+      for(let i = 2; i<res.length; i++){
+        toNum.push(Number.parseInt(res[i]));
+      }
+    } else {
+      res.forEach(el => toNum.push(Number.parseInt(el)));
+    }
+    return toNum;
+  }
