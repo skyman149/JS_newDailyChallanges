@@ -12,9 +12,24 @@ In some cases, there will be an array containing a negative number as the first 
 
 [3,2,6,6],[-7,2,2,8] --> [-3,9,6,2] # 3266 + (-7228) = -3962
 */
-
+// my second code
 function addArrays(array1, array2) {
+    if(array1.length === 0 && array2.length === 0) return [];
+    if(array1.length !== 0 && array2.length === 0) return array1;
+    if(array1.length === 0 && array2.length !== 0) return array2;
     let arrayToNumber1 = parseInt(array1.join(''));
     let arrayToNumber2 = parseInt(array2.join(''));
-    return arrayToNumber1 + arrayToNumber2;
+    
+    let sum = arrayToNumber1 + arrayToNumber2;
+    
+    let res = [...`${sum}`].map(Number);
+    
+    if (sum < 0) {
+      res.shift();
+      res[0] = -res[0];
+    }
+    
+    return res;
   }
+
+  // my first code
