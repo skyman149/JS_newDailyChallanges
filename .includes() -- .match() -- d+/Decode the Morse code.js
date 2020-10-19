@@ -61,3 +61,14 @@ decodeMorse = function(morseCode){
     }  
     return result.trim();
   }
+
+  //OR
+
+  decodeMorse = function(morseCode){
+    return morseCode.split("   ").
+            map(s=>s.split(" ")).
+            map(s=>s.map(s=>MORSE_CODE[s])).
+            map(s=>s.join("")).
+            join(" ").trim();
+   
+ }
