@@ -41,6 +41,9 @@ function solve(n) {
     
     return n === 0 ? count : -1;
   }
+
+// OR
+
   function solve(n) {
     const arr = [500, 200, 100, 50, 20, 10];
     let count = 0;
