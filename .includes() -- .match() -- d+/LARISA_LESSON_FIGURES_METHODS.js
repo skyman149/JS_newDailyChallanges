@@ -235,7 +235,10 @@ function stairs(n){
     let s = '';
     for(let i = 1; i <= n; i++){ // chislo strok
       for(let j = 1; j <= i; j++){
-        s += j
+        s += j + ' ';
+      }
+      for(let j = i; j >= 1; j--){
+        s += j + ' ';
       }
       s += '\n';
     }
