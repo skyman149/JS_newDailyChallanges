@@ -39,7 +39,19 @@ pattern(11):
 Hint: Use \n in string to jump to next line
 */
 
-
+function pattern(n){
+    let output = "";
+    let arr = [];
+    for(let i = n; i >= 1; i--){
+      arr.push(i);
+    }
+    while (arr.length > 0){
+      output += arr.join('') + "\n";
+      arr.pop();
+    }
+     
+   return output.slice(0, -1);
+  }
 
 // VERY NICE SOLUTION
 
