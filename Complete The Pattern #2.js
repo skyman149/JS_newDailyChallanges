@@ -64,3 +64,4 @@ function pattern(n) {
     }
     return output;
    }
+   //
