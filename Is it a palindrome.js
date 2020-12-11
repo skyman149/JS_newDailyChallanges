@@ -41,3 +41,14 @@ function isPalindrome(str){
   let abcReverse = abc.split('').reverse().join('')
   return abc === abcReverse; 
 }
+
+// OR
+
+function isPalindrome(x) {
+  x = x.toLowerCase();
+  let res = "";
+  for(let letter of x){
+    res = letter + res;
+  }
+  return res === x;
+}
