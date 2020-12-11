@@ -5,6 +5,8 @@ a=26, z=1 etc. You should also account for '!', '?' and ' ' that are represented
 by '27', '28' and '29' respectively.
 */
 
+// via Object 
+
 function switcher(x){
     const obj={
       1:'z',2:'y',3:'x',4:'w',5:'v',6:'u',7:'t',8:'s',9:'r',10:'q',
@@ -13,3 +15,14 @@ function switcher(x){
     }
     return x.map(v=>obj[v]).join('');
   }
+
+// via String methods
+
+function switcher(x){
+  let res = "";
+  let alph = "0zyxwvutsrqponmlkjihgfedcba!? ";
+  for(let i = 0; i < x.length; i++){
+    res += alph[x[i]];
+  }
+  return res;
+}
