@@ -22,7 +22,7 @@ function switcher(x){
   let res = "";
   let alph = "0zyxwvutsrqponmlkjihgfedcba!? ";
   for(let i = 0; i < x.length; i++){
-    res += alph[x[i]];
+    res += alph[+x[i]];
   }
   return res;
 }
