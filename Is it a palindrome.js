@@ -16,6 +16,24 @@ function isPalindrome(x) {
     return str.toUpperCase() === x.toUpperCase();
   }
 
+// OR
+
+function isPalindrome(x) {
+  let xx = x.toLowerCase();
+  return xx === xx.split("").reverse().join("");
+}
+
+// OR
+
+function isPalindrome(x) {
+  x = x.toLowerCase();
+  let res = "";
+  for(let i = 0; i < x.length; i++){
+    res = x[i] + res;
+  }
+  return res === x;
+}
+
 // NOTE: IF YOU NEED TO CHECK 'if palindrome is more then one word' USE THIS CODE:
 
 function isPalindrome(str){
