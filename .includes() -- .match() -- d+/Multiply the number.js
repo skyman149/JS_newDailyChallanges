@@ -8,3 +8,4 @@ function multiply(number){
     }
     return number < 0 ? -result : result;
   }
+  //--
