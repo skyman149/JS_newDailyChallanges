@@ -3,3 +3,4 @@ function domainName(url){
         let res = str.split(".")[0];
         return res;
   }
+  //--
