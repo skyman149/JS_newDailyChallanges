@@ -27,3 +27,4 @@ var romanToInt = function(s) {
   // -
   // --
   // ---
+  // ----
