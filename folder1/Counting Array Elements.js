@@ -3,5 +3,4 @@ function count(array){
     array.forEach(el => obj[el] ? obj[el]++ : obj[el] = 1);
     return obj;
   }
-  // --
   // ---
