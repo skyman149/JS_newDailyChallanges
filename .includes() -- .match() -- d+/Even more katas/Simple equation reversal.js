@@ -9,3 +9,8 @@ function solve(eq){
     }
     return result.join("");
   }
+
+  // OR
+
+  const solve = eq =>
+  eq.split(/([-+*/])/).reverse().join("");
