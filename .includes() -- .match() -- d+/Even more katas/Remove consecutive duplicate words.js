@@ -1,10 +1,10 @@
 const removeConsecutiveDuplicates = s => {
     let arr = s.split(" "),
-        newStr = [];
+        strArr = [];
       for (let i = 0; i < arr.length; i++) {
           if (arr[i] !== arr[i + 1]) {
-            newStr.push(arr[i]);
+            strArr.push(arr[i]);
           }
       }
-    return newStr.join(" ");
+    return strArr.join(" ");
   }
