@@ -11,4 +11,10 @@ function makeString(s){
   }
 
   
+  // OR
+
+  function makeString(s){
   
+    return s.split(" ").map(el => el[0]).join("");
+  
+  }
