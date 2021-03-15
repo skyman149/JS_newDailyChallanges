@@ -1,0 +1,1 @@
+const spam = (number) => "hue".repeat(number);
