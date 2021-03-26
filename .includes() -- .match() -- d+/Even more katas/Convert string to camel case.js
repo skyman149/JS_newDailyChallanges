@@ -21,4 +21,5 @@ function toCamelCase(str){
     }
     
     return camel.join('');
-  }
+  } 
+  //
