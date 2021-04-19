@@ -29,6 +29,4 @@ function printerError(s) {
 
 // OR
 
-function printerError(s) {
-    return s.match(/[^a-m]/g).length + "/" + s.length;
-}
+var printerError = (s) => (s.match(/[n-z]/g) || []).length + '/' + s.length
