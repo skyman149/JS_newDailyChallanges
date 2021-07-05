@@ -23,6 +23,7 @@ function sortArray(array) {
   // OR
 
   function sortArray(array) {
-    const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
-    return array.map((x) => x % 2 ? odd.shift() : x);
- }
+    const oddArr = array.filter((x) => x % 2).sort((a,b) => a - b); // filter removes odds, sort sorting in acs order
+    let result = array.map((el) => el % 2 ? oddArr.shift() : el); // map creates new array with provided condtion, shift removes and return 1st el of odd array
+    return result;
+  }
