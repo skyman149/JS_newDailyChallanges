@@ -9,3 +9,11 @@ function lastSurvivor(letters, coords) {
     
     return lettersArr.join('');
   }
+
+  // OR
+
+  function lastSurvivor(string, indices) {
+    const arr = [...string];
+    for (const i of indices) arr.splice(i, 1)
+    return arr[0];
+  }
