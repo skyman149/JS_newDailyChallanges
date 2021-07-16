@@ -8,3 +8,25 @@ var plusOne = function(digits) {
     return num.toString().split('');
       
   };
+
+// or long solution
+
+var plusOne = function(digits) {
+  
+    let target = digits.length-1
+    
+    while (target >=0 ) { 
+       if (digits[target] !== 9) {
+          digits[target] += 1;
+          return digits;
+       } 
+       if(target == 0 && digits[target] == 9) {
+         digits[target] = 0;
+         digits.unshift(1);
+         return digits;
+      }
+      
+    digits[target] = 0
+       target--
+    }
+  };
