@@ -30,3 +30,6 @@ var plusOne = function(digits) {
        target--
     }
   };
+
+console.log(plusOne([1,2,3])); // [1,2,4]
+console.log(plusOne([9,9])); // [1,0,0]
