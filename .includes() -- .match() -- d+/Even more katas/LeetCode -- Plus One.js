@@ -22,7 +22,7 @@ var plusOne = function(digits) {
        } 
        if(target == 0 && digits[target] == 9) {
          digits[target] = 0;
-         digits.unshift(1);
+         digits.unshift(1); // adds 1 in the begining of an array
          return digits;
       }
       
