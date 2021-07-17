@@ -16,3 +16,16 @@ var mySqrt = function(x) {
     }
     
 };
+
+//
+
+var mySqrt = function(x) {
+    
+    let lowNum;
+    
+    for (let i = 0; i <= x; i++) {
+        if (i * i === x) return i;
+        if (i * i < x) lowNum = i;
+        else return lowNum;       
+       }
+};
