@@ -4,7 +4,7 @@ function NameMe(first, last) {
     this.name = `${this.firstName} ${this.lastName}`;
 }
 
-//
+// OR
 
 function NameMe(first, last) {
     return { 
