@@ -1,6 +1,6 @@
 var Ball = function(ballType) {
 	if (typeof ballType === "string") this.ballType = ballType;
-  else this.ballType="regular";
+  else this.ballType = "regular";
 }
 
 ball1 = new Ball();
